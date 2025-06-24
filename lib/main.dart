@@ -13,12 +13,18 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Domain(),
+      initialRoute: '/',
+      getPages: [
+        GetPage(name: '/', page: () => const Domain()),
+        GetPage(name: '/about', page: () => const Aboutme()),
+        GetPage(name: '/skills', page: () => Skills()),
+        GetPage(name: '/projects', page: () => const Project()),
+        GetPage(name: '/contact', page: () => const ContactMePage()),
+      ],
     );
   }
 }

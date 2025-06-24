@@ -12,7 +12,7 @@ class SkillModel {
 
 /// ----------  SCREEN ------------ ///
 class Skills extends StatelessWidget {
-  Skills({Key? key}) : super(key: key); //  <-- NO `const` here!
+  Skills({super.key}); //  <-- NO `const` here!
 
   final List<SkillModel> _skills = [
     SkillModel(name: 'Flutter', icon: Icons.flutter_dash, level: .70),
